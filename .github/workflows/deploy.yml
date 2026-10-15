@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v7
       - name: Load & cache dependencies
         uses: ./.github/actions/cached-deps
+        id: caching-step
         with:
           caching: false
       - name: Test code
@@ -44,6 +45,7 @@ jobs:
         uses: actions/checkout@v7
       - name: Load & cache dependencies
         uses: ./.github/actions/cached-deps
+        id: caching-step
       - name: Build website
         run: |
           npm run build
