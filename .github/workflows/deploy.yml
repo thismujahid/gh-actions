@@ -73,5 +73,7 @@ jobs:
   run-custom:
     runs-on: ubuntu-latest
     steps:
+      - name: Get code
+        uses: actions/checkout@v7
       - name: Custom Action
         uses: ./github/actions/deploy-s3
