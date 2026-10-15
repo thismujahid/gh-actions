@@ -6,8 +6,9 @@ inputs:
     required: false
     default: "true"
 outputs:
-  used-cache: "Where the cache user."
-  value: ${{steps.install.outputs.cache}}
+  used-cache:
+    description: "Whether to enable caching or not"
+    value: ${{steps.install.outputs.cache}}
 runs:
   using: "composite"
   steps:
